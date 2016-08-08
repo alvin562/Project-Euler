@@ -43,8 +43,8 @@ long largestPrimeFactor(long n)
             long n1 = largestPrimeFactor(n/i);
             long n2 = largestPrimeFactor(i);
             
-            //the largest prime factor is
-            //the largest of the two
+            //the largest prime factor
+            //is the larger of the two
             return (n1 > n2) ? n1 : n2;
         }
     }
