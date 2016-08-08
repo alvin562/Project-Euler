@@ -1,3 +1,2 @@
 # Project-Euler
-my solutions to some of the project euler problems
-all solutions are created in C++
+My solutions to some of the project euler problems.  All solutions are created in C++
