@@ -1,7 +1,7 @@
 
 
 #include <iostream>
-
+#include <cmath>
 
 // returns true if number is prime; false otherwise
 int isPrime(long n)
@@ -10,7 +10,7 @@ int isPrime(long n)
         
         return 0;
     
-    for(int i = 2; i <= n/2; i++) {
+    for(int i = 2; i <= sqrt(n); i++) {
         
         if(n % i == 0)
             
@@ -29,7 +29,7 @@ long largestPrimeFactor(long n)
         return n;
     
     
-    for(int i = 2; i <= n/2; i++) {
+    for(int i = 2; i <= sqrt(n); i++) {
         
         
         //we enter this if statement for
@@ -37,14 +37,9 @@ long largestPrimeFactor(long n)
         //isn't already prime
         if(n % i == 0) {
             
-            //we find the largest prime factor
-            //from the left and right sub trees
-            //of n's prime factorization tree
             long n1 = largestPrimeFactor(n/i);
             long n2 = largestPrimeFactor(i);
             
-            //the largest prime factor
-            //is the larger of the two
             return (n1 > n2) ? n1 : n2;
         }
     }
